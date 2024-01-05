@@ -126,7 +126,7 @@
             android:summary="@string/use_stream_spoof_summary"
             android:defaultValue="true" />
 
-       <com.superior.support.preferences.SecureSettingSwitchPreference
+         <SwitchPreference
            android:key="use_games_spoof"
            android:title="@string/use_games_spoof_title"
            android:summary="@string/use_games_spoof_summary"
