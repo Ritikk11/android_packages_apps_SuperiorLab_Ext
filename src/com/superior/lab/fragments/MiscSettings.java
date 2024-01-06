@@ -142,23 +142,6 @@ private static final String KEY_GAMES_SPOOF = "use_games_spoof";
         mStreamSpoof.setOnPreferenceChangeListener(this);
     }
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mGamesSpoof) {
-            boolean value = (Boolean) objValue;
-            SystemProperties.set(SYS_GAMES_SPOOF, value ? "true" : "false");
-            return true;
-        } else if (preference == mPhotosSpoof) {
-            boolean value = (Boolean) objValue;
-            SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
-            return true;
-        } else if (preference == mStreamSpoof) {
-            boolean value = (Boolean) objValue;
-            SystemProperties.set(SYS_STREAM_SPOOF, value ? "true" : "false");
-            return true;
-        }
-        return false;
-    }
 @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.SUPERIOR;
